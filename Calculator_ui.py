@@ -12,12 +12,27 @@ class CalculatorUI(tk.Tk):
         self.geometry("300x350")
         self.configure(bg='#ffcccc')
 
-operations = ["+", "-", "*", "/"]
+        operations = ["+", "-", "*", "/"]
 
 # Create labels for operation and operation options 
+        operation_label = tk.Label(self, text="Choose an operation:", bg='#ffcccc')
+        operation_label.pack(pady=10)
+
+        self.operation_var = tk.StringVar(self)
+        operation_menu = tk.OptionMenu(self, self.operation_var, *operations)
+        operation_menu.pack(pady=10)
 
 # Create labels and fields for numbers
+        num1_label = tk.Label(self, text="Enter first number:", bg='#ffcccc')
+        num1_label.pack(pady=10)
+        self.num1_entry = tk.Entry(self)
+        self.num1_entry.pack(pady=10)
 
+        num2_label = tk.Label(self, text="Enter second number:", bg='#ffcccc')
+        num2_label.pack(pady=10)
+        self.num2_entry = tk.Entry(self)
+        self.num2_entry.pack(pady=10)
+        
 # Create label for result
 
 # Create calculate button

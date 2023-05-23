@@ -11,7 +11,7 @@ class Calculator:
                 result = num1 - num2
             # Multiplication
             elif operation == '*':
-                result == num1 * num2
+                result = num1 * num2
             # Division
             elif operation == '/':
                 result = num1 / num2

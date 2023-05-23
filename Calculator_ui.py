@@ -67,6 +67,11 @@ class CalculatorUI(tk.Tk):
         self.num2_entry.delete(0, 'end')
 
 # Ask user if they want to try again or exit using messagebox
-
-    # If yes, clear result label and continue
-    # If no, destroy UI and exit
+        trial = tk.messagebox.askquestion("Try again?", "Do you want to try again?")
+    
+        # If yes, clear result label and continue
+        if trial == 'yes':
+            self.result_label.config(text="")
+        else:
+        # If no, destroy UI and exit
+            self.destroy()

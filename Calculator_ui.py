@@ -55,8 +55,11 @@ class CalculatorUI(tk.Tk):
             self.result_label.config(text="Result: " + str(result))
 
 # Display error message in result label
- 
+        except ValueError as error:
+            self.result_label.config(text=str(error))
 
- 
+        except ZeroDivisionError as error:
+            self.result_label.config(text=str(error))
+
 # Clear operation and number entry fields
 

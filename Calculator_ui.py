@@ -40,15 +40,23 @@ class CalculatorUI(tk.Tk):
 # Create calculate button
         calculate_button = tk.Button(self, text="Calculate", command=self.calculate)
         calculate_button.pack(pady=10)
-
-        
+   
 # Define calculate method
+   def calculate(self):
+        try:
+        # Get the selected operation and the numbers
+            operation = self.operation_var.get()
+            num1 = float(self.num1_entry.get())
+            num2 = float(self.num2_entry.get())
 
-# Get the selected operation and the numbers
+        # Call the calculate method from the CalculatorLogic class to perform calculation
+            result = Calculator.calculate(operation, num1, num2)
 
-# Call the calculate method from the CalculatorLogic class to perform calculation
+            self.result_label.config(text="Result: " + str(result))
 
 # Display error message in result label
+ 
 
+ 
 # Clear operation and number entry fields
 

@@ -42,7 +42,7 @@ class CalculatorUI(tk.Tk):
         calculate_button.pack(pady=10)
    
 # Define calculate method
-   def calculate(self):
+    def calculate(self):
         try:
         # Get the selected operation and the numbers
             operation = self.operation_var.get()

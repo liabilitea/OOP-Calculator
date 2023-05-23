@@ -32,11 +32,16 @@ class CalculatorUI(tk.Tk):
         num2_label.pack(pady=10)
         self.num2_entry = tk.Entry(self)
         self.num2_entry.pack(pady=10)
-        
+
 # Create label for result
+        self.result_label = tk.Label(self, text="", bg='#ffcccc')
+        self.result_label.pack(pady=10)
 
 # Create calculate button
+        calculate_button = tk.Button(self, text="Calculate", command=self.calculate)
+        calculate_button.pack(pady=10)
 
+        
 # Define calculate method
 
 # Get the selected operation and the numbers

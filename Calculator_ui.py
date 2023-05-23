@@ -62,4 +62,11 @@ class CalculatorUI(tk.Tk):
             self.result_label.config(text=str(error))
 
 # Clear operation and number entry fields
+        self.operation_var.set("")
+        self.num1_entry.delete(0, 'end')
+        self.num2_entry.delete(0, 'end')
 
+# Ask user if they want to try again or exit using messagebox
+
+    # If yes, clear result label and continue
+    # If no, destroy UI and exit

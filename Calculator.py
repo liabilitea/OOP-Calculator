@@ -17,4 +17,12 @@ class Calculator:
                 result = num1 / num2
 #Handle exceptions
             else:
+                raise ValueError("Invalid operation selected.")
             
+            return result
+        
+        except ValueError as error:
+            raise ValueError("Error: " + str(error))
+        
+        except ZeroDivisionError as error:
+            raise ZeroDivisionError("Error: Cannot be divided by zero.")

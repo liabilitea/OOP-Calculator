@@ -1,7 +1,16 @@
 # Import modules for UI
+import tkinter as tk
+from tkinter import messagebox
+from Calculator import Calculator
 
 # Define CalculatorUI class to manage and customize the interface
-    # Ensure
+class CalculatorUI(tk.Tk):
+    def __init__(self):
+    # Call method of parent class
+        super().__init__()
+        self.title("Calculator")
+        self.geometry("300x350")
+        self.configure(bg='#ffcccc')
 
 operations = ["+", "-", "*", "/"]
 

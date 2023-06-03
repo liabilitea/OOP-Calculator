@@ -1,18 +1,18 @@
 # Import modules for UI
 import tkinter as tk
 from tkinter import messagebox
-from Calculator import Calculator
+from Sci_cal import ScientificCalculator
 
 # Define CalculatorUI class to manage and customize the interface
 class CalculatorUI(tk.Tk):
     def __init__(self):
     # Call method of parent class
         super().__init__()
-        self.title("Calculator")
-        self.geometry("300x350")
+        self.title("Scientific Calculator")
+        self.geometry("350x350")
         self.configure(bg='#ffcccc')
 
-        operations = ["+", "-", "*", "/"]
+        operations = ["+", "-", "*", "/", "^", "log" ]
 
 # Create labels for operation and operation options 
         operation_label = tk.Label(self, text="Choose an operation:", bg='#ffcccc')

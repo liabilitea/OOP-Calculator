@@ -1,7 +1,7 @@
 # Define class to import later
 
 class Calculator:
-    def calculate(operation, num1, num2=None):
+    def calculate(self, operation, num1, num2=None):
         try:
             # Addition
             if operation == '+':

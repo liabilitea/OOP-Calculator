@@ -20,4 +20,4 @@ class ScientificCalculator(Calculator):
         if operation == '^':
             return self.power(num1, num2)
         else:
-            return super().calculate(num1, num2)
+            return super().calculate(operation, num1, num2)

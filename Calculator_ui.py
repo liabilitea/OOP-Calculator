@@ -57,11 +57,20 @@ class CalculatorUI(tk.Tk):
         # Get the selected operation and the numbers
             operation = self.operation_var.get()
             num1 = float(self.num1_entry.get())
-            num2 = float(self.num2_entry.get())
+        
+            # Create instance of SciCal Calculator
+            calculator = ScientificCalculator()
 
-        # Call the calculate method from the CalculatorLogic class to perform calculation
-            result = Calculator.calculate(operation, num1, num2)
-
+        # Check if operation is log, exponent, or others
+            if operation == 'log':
+                result = calculator.log(num1)
+            elif operation == '^':
+                num2 = float(self.num2_entry.get())
+                result = calculator.calculate(operation, num1, num2)
+            else:
+                num2 = float(self.num2_entry.get())
+                result = calculator.calculate(operation, num1, num2)
+        
             self.result_label.config(text="Result: " + str(result))
 
 # Display error message in result label

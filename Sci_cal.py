@@ -8,5 +8,11 @@ class ScientificCalculator(Calculator):
     def power(self, num1, num2):
         return num1 ** num2
     
-# Create method t calculate using log operation
+    # Create method t calculate using log operation
+    def log(self, num1):
+        return self.logbase(num1)
     # Use base 10 for log
+    def logbase(self, num, base=10):
+        return math.log(num, base)
+    
+# Perform other calculations using the parent class

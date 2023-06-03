@@ -16,7 +16,7 @@ class ScientificCalculator(Calculator):
         return math.log(num, base)
     
 # Perform other calculations using the parent class
-    def calculate(operation, num1, num2=None):
+    def calculate(self, operation, num1, num2=None):
         if operation == '^':
             return self.power(num1, num2)
         else:

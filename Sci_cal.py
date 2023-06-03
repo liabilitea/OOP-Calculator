@@ -1,4 +1,6 @@
 # Import necessary modules
+import math
+from Calculator import Calculator
 
 # Create new class 
 

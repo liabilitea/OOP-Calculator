@@ -19,7 +19,7 @@ class CalculatorUI(tk.Tk):
         operation_label.pack(pady=10)
 
         self.operation_var = tk.StringVar(self)
-        operation_menu = tk.OptionMenu(self, self.operation_var, *operations)
+        operation_menu = tk.OptionMenu(self, self.operation_var, *operations, command=self.log_operation)
         operation_menu.pack(pady=10)
 
 # Create labels and fields for numbers

@@ -28,7 +28,7 @@ class CalculatorUI(tk.Tk):
         self.num1_entry = tk.Entry(self)
         self.num1_entry.pack(pady=10)
 
-        num2_label = tk.Label(self, text="Enter second number:", bg='#ffcccc')
+        num2_label = tk.Label(self, text="Enter second number (not applicable with log operation):", bg='#ffcccc')
         num2_label.pack(pady=10)
         self.num2_entry = tk.Entry(self)
         self.num2_entry.pack(pady=10)
@@ -40,6 +40,16 @@ class CalculatorUI(tk.Tk):
 # Create calculate button
         calculate_button = tk.Button(self, text="Calculate", command=self.calculate)
         calculate_button.pack(pady=10)
+
+# Handle fields when user choose log operation
+    def log_operation(self, operation):
+        if operation == "log":
+            self.num1_entry.delete(0, tk.END)
+            self.num1_entry.insert(0, "1")
+            self.num2_entry.configure(state=tk.DISABLED)
+        else:
+            self.num1_entry.delete(0, tk.END)
+            self.num2_entry.configure(state=tk.NORMAL)
    
 # Define calculate method
     def calculate(self):
